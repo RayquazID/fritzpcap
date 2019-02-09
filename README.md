@@ -18,3 +18,8 @@ Usage
 ```bash
 ./fritzpcap.py <TIME TO CAPTURE IN SECONDS>
 ```
+
+Requirements:
+ - Pwntools (if you don't want this just replace the log.info() funktion)
+ - requests
+ - hashlib
