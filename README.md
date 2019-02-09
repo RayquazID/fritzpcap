@@ -19,6 +19,13 @@ Usage
 ./fritzpcap.py <TIME TO CAPTURE IN SECONDS>
 ```
 
+Variables to setup:
+ - url = '' # Your IP Adress
+ - user = '' # Your Username optional
+ - passwd = '' # Your Password
+ - target_path = './datastream.pcap' # Your output location
+ - interface ='1-lan' # Default interface
+
 Requirements:
  - Pwntools (if you don't want this just replace the log.info() funktion)
  - requests
