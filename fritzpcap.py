@@ -48,7 +48,7 @@ def fLogin():
 		final_response = chall + '-' + md5_chall_response
 
 		payload = 'response=' + final_response + '&lp=&username='
-
+		print 'Current login challenge is ' chall
 		print 'Generated final response: ' + final_response
 
 		r = req.post(login_url, data=payload, headers=headers_app)
