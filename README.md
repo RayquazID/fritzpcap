@@ -11,7 +11,7 @@ other planned impovements:
  - select interface to capture
  - command line arguments
  - selecting output location
- - some cool swag and colors
+
 if someone has suggestions on making this little project better, let me know
 
 Usage
