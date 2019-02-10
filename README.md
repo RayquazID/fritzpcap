@@ -27,5 +27,7 @@ Variables to setup:
  - interface ='1-lan' # Default interface
 
 Requirements:
- - requests
- - hashlib
+Install requests
+```bash
+pip install requests
+```
