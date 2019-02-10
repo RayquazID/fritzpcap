@@ -14,7 +14,7 @@ other planned impovements:
 
 if someone has suggestions on making this little project better, let me know
 
-Usage
+#### Usage
 ```bash
 ./fritzpcap.py <TIME TO CAPTURE IN SECONDS>
 ```
@@ -26,6 +26,8 @@ Variables to setup:
  - target_path = './datastream.pcap' # Your output location
  - interface ='1-lan' # Default interface
 
-Requirements:
- - requests
- - hashlib
+#### Requirements
+Install requests
+```bash
+pip install requests
+```
