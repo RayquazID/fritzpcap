@@ -1,6 +1,5 @@
 #!/usr/bin/env python2
 
-from pwn import *
 import hashlib
 import time
 import sys
@@ -8,11 +7,11 @@ import requests as req
 from requests.auth import HTTPDigestAuth
 from xml.etree import ElementTree
 
-log.info('Starting fritzpcap_0.1...')
-log.info('greez from @rayquazID')
+print 'Starting fritzpcap_0.1...'
+print 'greez from @rayquazID'
 
 # Setup some variables
-url = '' # Your IP Adress
+url = '' # http://Your Adress
 login_url = url + '/login_sid.lua'
 cap_url = url + '/?lp=cap'
 capture_url = url + '/cgi-bin/capture_notimeout?sid='
@@ -47,18 +46,18 @@ def fLogin():
 
 		payload = 'response=' + final_response + '&lp=&username='
 
-		log.info('Generated final response: ' + final_response)
+		print 'Generated final response: ' + final_response
 
 		r = req.post(login_url, data=payload, headers=headers_app)
 
 		if '<SID>' in r.text:
 			tree = ElementTree.fromstring(r.text)
 			sid = tree[0].text
-			log.info('GOT SID: '+ sid)
+			print 'GOT SID: '+ sid
 				
-		log.info('Login Successfull - Start Capture')
+		print 'Login Successfull - Start Capture'
 	else:
-		log.info('Login Failed - Try again')
+		print 'Login Failed - Try again'
 
 	return sid
 
@@ -83,10 +82,10 @@ def startpCapture():
 	        		handle.write(chunk)
 	        	else:
 	        		stoppCapture()
-	        		log.info('Capture Stopped by timer')
+	        		print 'Capture Stopped by timer'
 
 	        		return
-	log.info('Returning from capture')
+	print 'Returning from capture'
 	return
 
 tmp_sid = fLogin()
