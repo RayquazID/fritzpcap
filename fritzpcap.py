@@ -62,6 +62,7 @@ def fLogin():
 				print 'Login Failed - no valid SID found - Try again'
 				return
 
+
 		print 'Login Successfull - Start Capture'
 	else:
 		print 'Login Failed - Try again'
@@ -71,8 +72,8 @@ def fLogin():
 def stoppCapture():
 	test = '&capture=Stop&snaplen=1600&ifaceorminor='
 	r = req.get(capture_url + tmp_sid + test + interface, stream=True)
-	print r.text
-	print r.status_code
+	# print r.text
+	# print r.status_code
 	return
 
 def startpCapture():
@@ -80,7 +81,7 @@ def startpCapture():
 	test = '&capture=Start&snaplen=1600&ifaceorminor='
 	handle = open(target_path, "wb")
 	r = req.get(capture_url + tmp_sid + test + interface, stream=True)
-	print r.status_code
+	# print r.status_code
 	for chunk in r.iter_content(chunk_size=512):
     		if chunk:  # filter out keep-alive new chunks
     			t_tmp = time.time()
