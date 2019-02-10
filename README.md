@@ -1,7 +1,7 @@
 # fritzpcap
 ### make a packet capture on the whole lan traffic and create a datastream.pcap
 
-
+tested with FRITZ!Box 7430 on FRITZ!OS 06.83
 
 at the moment, this is just for my personal use and pretty raw
 you have to define sone default variables befor use
