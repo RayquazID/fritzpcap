@@ -27,6 +27,5 @@ Variables to setup:
  - interface ='1-lan' # Default interface
 
 Requirements:
- - Pwntools (if you don't want this just replace the log.info() funktion)
  - requests
  - hashlib
