@@ -56,8 +56,12 @@ def fLogin():
 		if '<SID>' in r.text:
 			tree = ElementTree.fromstring(r.text)
 			sid = tree[0].text
-			print 'GOT SID: '+ sid
-				
+			if sid != '0000000000000000':
+				print 'GOT SID: '+ sid
+			else:
+				print 'Login Failed - no valid SID found - Try again'
+				return
+
 		print 'Login Successfull - Start Capture'
 	else:
 		print 'Login Failed - Try again'
@@ -92,5 +96,6 @@ def startpCapture():
 	return
 
 tmp_sid = fLogin()
-startpCapture()
+if tmp_sid != '0000000000000000':
+	startpCapture()
 
