@@ -12,23 +12,26 @@ print 'greez from @rayquazID'
 
 # Setup some variables
 url = '' # http://Your Adress
+user = '' # Your Username optional
+passwd = '' # Your Password
+target_path = '/home/rayquazid/fritz/datastream.pcap' # Your output location
+interface ='1-lan' # Default interface
+
+
 login_url = url + '/login_sid.lua'
 cap_url = url + '/?lp=cap'
 capture_url = url + '/cgi-bin/capture_notimeout?sid='
 index_url = url + '/index.lua'
 query_url = url + '/query.lua?'
 
-user = '' # Your Username optional
-passwd = '' # Your Password
 
 headers_xml = {'Content-Type': 'text/xml'}
 headers_app = {'Content-Type': 'application/x-www-form-urlencoded'}
 query_sessions = 'sessions=capture:settings/session/list(displayname,ifacename,minor,type)'
 query_defaults = 'dtrace=capture:settings/dtrace_running&dfileold=capture:settings/dtrace_old&dfilenew=capture:settings/dtrace_new&lte=lted:settings/trace/status&wlantrace=wlan:settings/debug_settings/trace_state&ltetrace=lted:settings/trace/enabled&xhr=1'
 
-# needs a path to a writable directory
-target_path = '/home/rayquazid/fritz/datastream.pcap' # Your output location
-interface ='1-lan' # Default interface
+
+
 
 def fLogin():
 	r = req.get(login_url, headers=headers_xml)
