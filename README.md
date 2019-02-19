@@ -4,8 +4,8 @@
 tested with FRITZ!Box 7430 on FRITZ!OS 06.83
 
 at the moment, this is just for my personal use and pretty raw
-you have to define sone default variables befor use
-i'll make an interactive way to input this soon
+you have to define some default variables before use.
+I'll make an interactive way to input these soon
 other planned impovements:
  - list all possible interfaces to capture on
  - select interface to capture
